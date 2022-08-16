@@ -39,8 +39,25 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+Todo:
+1. Refactor code to production-grade quality.
+2. Find and describe bugs and issues.
+- App.tsx
+- infinite loop - todos are generated every 100ms React.useEffect asynchronously change state what force to re-render.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Todo.tsx
+- Force re-render of page - handleOnClick changes windows location what force page to reload that is unnecessary
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Add styling by your choice. (You can add styling library)
+- And.design was used.
+
+4. Demonstrate connection to backend API.
+- Postman todolist herokuapp was used.
+- https://documenter.getpostman.com/view/8858534/SW7dX7JG
+
+5. Add Todo detail page (add routing to app, use context api for state management from fetch todos to render todos and detail)
+6. Todo component has defined shouldComponentUpdate lifecycle, but it can be done better, adjust it
+7. Optional: rewrite Todo component to FC (choose if you want, prepare explanation)
+- React.memo() When deciding to update DOM, React first renders your component, then compares the result with the previous render. If the render results are different, React updates the DOM.
+Current vs previous render results comparison is fast. But you can speed up the process under some circumstances.
+When a component is wrapped in React.memo(), React renders the component and memoizes the result. Before the next render, if the new props are the same, React reuses the memoized result skipping the next rendering.

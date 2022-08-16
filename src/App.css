@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+/* Basic */
+#root {
+    height: 100%!important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+    float: left;
+    color: #fff;
+    width: 10rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu {
+    float: right;
+}
+/* !Basic*/
+
+/* Layout */
+.page {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    padding: 1rem;
+    background-color: #282c34;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+    flex: 1 1 auto;
+    min-height: auto!important;
+    padding: 1.5rem 2rem;
+    background-color: #f0f2f5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.site-layout-content {
+    padding: 1.5rem;
+    background-color: #fff;
 }
+
+.footer {
+    flex: 0 1 40px;
+    text-align: center;
+    color: #000000d9;
+    font-size: 0.8rem;
+    background: #f0f2f5;
+}
+/* !Layout */
+
+/* home page */
+.card-addTodoForm {
+    margin-bottom: 1rem!important;
+}
+/* !home page */
